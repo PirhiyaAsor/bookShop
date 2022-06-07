@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>BookShop</title>
+</head>
+
+<body class="container" onload="init()">
+  <header>
+    <h1> My Book Shop</h1>
+  </header>
+  <section class="books-filter">
+    <h4>Filter</h4>
+    <select class="filter-category-select" onchange="onSetFilterBy({category: this.value})">
+      <option value="">Category</option>
+    </select>
+    <br/>
+    <label>
+      Min Price:
+      <input type="range" min="0" max="85" value="25" class="filter-price-range"
+        onchange="this.title=this.value;onSetFilterBy({minPrice: this.value})" />
+    </label></section>
+    <section><button class="btn" onclick="onAddBook()">Add Book</button></section>
+    <br/>
+    <table class="book-list">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Book Name</th>
+          <th>Price</th>
+          <th colspan="3">Action</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <!-- <button class="action-btn"><i class="fa fa-book"></i>Read</button>
+    <button class="action-btn"><i class="fa fa-refresh"></i>Update</button>
+    <button class="action-btn"><i class="fa fa-trash"></i> Trash</button> -->
+
+    <!-- <div class="modal">
+            <h3>Book name</h3>
+            <h4>Book Price <span></span> </h4>
+            <h5>Book Description</h5>
+            <p></p>
+            <button onclick="onCloseModal()">Close</button>
+            <button class="remove" onclick="onRemoveRating(this.value)"> -</button>
+        <span class="rate"></span>
+        <button class="add" onclick="onAddRating(this.value)">+ </button>
+    </div> -->
+    <script src="js/service/storage.service.js"></script>
+    <script src="js/service/util.service.js"></script>
+    <script src="js/book.controller.js"></script>
+    <script src="js/service/book.service.js"></script>
+</body>
+
+</html>

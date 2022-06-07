@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body {
+    background-color: cornsilk;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;;
+}
+
+
+table {
+    flex-direction: column;
+    border-collapse: collapse;
+    /* border: 1px solid black; */
+    table-layout: auto;
+    width: 80%;
+    margin-top: 1em;
+}
+
+th,
+td {
+    padding: 1em;
+    border-bottom: 1px solid black;
+}
+
+tr:nth-child(even) {
+    background-color: #f7dcc6;
+}
+
+th {
+    background-color: coral;
+    color: white;
+}
+
+header,
+section,
+table {
+    flex-direction: row;
+    gap:10px;
+}
+
+h1 {
+    font-family: 'Roboto Condensed', sans-serif;;
+}
+.btn {
+    font-family: 'Roboto Condensed', sans-serif;;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    border-radius: 2em;
+    border: 1px solid coral;
+    color: white;
+    background-color: coral;
+    transition: 0.3s;
+}
+.btn:hover {
+    background-color: rgb(226, 61, 1);
+}
+.action-btn {
+    font-family: 'Roboto Condensed', sans-serif;;
+    background-color: rgb(47, 188, 224);
+    border-radius: 1em;
+    border: none;
+    color: white;
+    padding:0.5em;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.action-btn:hover {
+    background-color: rgb(13, 115, 141);
+}
